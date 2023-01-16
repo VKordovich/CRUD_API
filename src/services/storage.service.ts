@@ -91,10 +91,6 @@ export class StorageService implements StorageInterface {
 
 	private deleteUser(data: string, body: UserInterface): UserInterface[] {
 		const users = JSON.parse(data) as UserInterface[];
-		console.log(
-			'deleteUser',
-			users.filter((user) => user.id !== body.id),
-		);
 		return users.filter((user) => user.id !== body.id);
 	}
 }
