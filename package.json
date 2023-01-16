@@ -2,10 +2,12 @@
   "name": "crud_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "main.ts",
+  "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "dev": "nodemon"
+    "start:dev": "nodemon",
+    "start:prod": "tsc && node ./dist/main.js",
+    "start:multi": "ts-node src/cluster.ts"
   },
   "keywords": [],
   "author": "",
